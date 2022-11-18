@@ -9,7 +9,13 @@ public class Deck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<string> card1 = new List<string>{"A", "B", "C", "D", "E"};
+        //put all the cards in the deck
+        makeDeck1(); //called deck1 in case we make more starter decks
+    }
+
+    void makeDeck1()
+    {
+        List<string> card1 = new List<string>{"name", "conversation", "attractive", "1", "none"};
         cards.Add(card1);
     }
 
