@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trait : MonoBehaviour
 {
-    int trait;
+    int trait = 0;
     void adjust(int adjustment)
     {
         trait += adjustment;

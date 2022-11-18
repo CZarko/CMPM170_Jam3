@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interest : MonoBehaviour
 {
-    int interest;
+    int interest = 0;
     void adjust(int adjustment)
     {
         interest += adjustment;

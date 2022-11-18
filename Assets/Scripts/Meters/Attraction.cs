@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Attraction : MonoBehaviour
 {
-    int attraction;
+    //made public for easier debugging
+    public int attraction = 0;
     void adjust(int adjustment)
     {
         attraction += adjustment;

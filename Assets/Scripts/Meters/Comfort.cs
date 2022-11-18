@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Comfort : MonoBehaviour
 {
-    int comfort;
+    int comfort = 0;
     void adjust(int adjustment)
     {
         comfort += adjustment;
