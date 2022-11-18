@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
-    List<List<string>> cards;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +14,7 @@ public class Deck : MonoBehaviour
 
     void makeDeck1()
     {
-        List<string> card1 = new List<string>{"name", "conversation", "attractive", "1", "none"};
-        cards.Add(card1);
+        
     }
 
     // Update is called once per frame
