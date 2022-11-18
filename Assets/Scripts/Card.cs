@@ -13,12 +13,17 @@ public class Card : MonoBehaviour
 
 
     //sets all the values for the card
-    internal void setParams(string name, string topic, string type, string subtype, string effect)
+    internal void setParams(string[] cardParams)
     {
-        cardName = name;
-        cardTopic = topic;
-        cardType = type;
-        cardSubtype = subtype;
-        cardEffect = effect;
+        cardName = cardParams[0];
+        cardTopic = cardParams[1];
+        cardType = cardParams[2];
+        cardSubtype = cardParams[3];
+        cardEffect = cardParams[4];
+        
+        foreach(string item in cardParams)
+        {
+            print(item);
+        }
     }
 }
