@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem; 
 
-public class CardMaker : MonoBehaviour, IPointerDownHandler
+public class CardMaker : MonoBehaviour
 {
-    internal GameObject cardPrefab;
+    public GameObject cardPrefab;
     public InputAction inputController;
 
     //parameters to be passed to the new card
@@ -20,15 +20,20 @@ public class CardMaker : MonoBehaviour, IPointerDownHandler
     {
         inputController.Disable();
     }
-    public void OnPointerDown(PointerEventData eventData)
+    
+
+    private void spawnCard(string[] newParams)
     {
         GameObject newCard = Instantiate(cardPrefab, new Vector2(0, 0), Quaternion.identity);
-        newCard.SendMessage("setParams", cardParams);
+        newCard.SendMessage("setParams", newParams);
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if(Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            spawnCard(cardParams);
+        }
     }
     
 }

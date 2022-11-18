@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abab90152debb9f4c8880c627499a439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 159573878623078305, guid: 957067c88adeeb24fad61629a04f8f76, type: 3}
   inputController:
     m_Name: Input Controller
     m_Type: 0
