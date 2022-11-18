@@ -10,7 +10,7 @@ public class CardMaker : MonoBehaviour, IPointerDownHandler
     public InputAction inputController;
 
     //parameters to be passed to the new card
-    string[] cardParams = ["a","b","c","d","e"];
+    string[] cardParams = { "a", "b", "c", "d", "e" };
 
     private void OnEnable()
     {
