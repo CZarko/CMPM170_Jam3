@@ -8,6 +8,7 @@ public class CardMaker : MonoBehaviour
 {
     public GameObject cardPrefab;
     public InputAction inputController;
+    public Camera cam;
 
     //parameters to be passed to the new card
     string[] cardParams = { "a", "b", "c", "d", "e" };
@@ -22,9 +23,9 @@ public class CardMaker : MonoBehaviour
     }
     
 
-    private void spawnCard(string[] newParams)
+    private void spawnCard(string[] newParams, Vector3 spawnLocation)
     {
-        GameObject newCard = Instantiate(cardPrefab, new Vector2(0, 0), Quaternion.identity);
+        GameObject newCard = Instantiate(cardPrefab, spawnLocation, Quaternion.identity);
         newCard.SendMessage("setParams", newParams);
     }
     // Update is called once per frame
@@ -32,7 +33,9 @@ public class CardMaker : MonoBehaviour
     {
         if(Mouse.current.leftButton.wasPressedThisFrame)
         {
-            spawnCard(cardParams);
+            Vector3 mousePos = cam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            mousePos.z = 10;
+            spawnCard(cardParams, mousePos);
         }
     }
     

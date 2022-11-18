@@ -300,3 +300,4 @@ MonoBehaviour:
       m_Action: Input Controller
       m_Flags: 0
     m_Flags: 0
+  cam: {fileID: 519420031}
