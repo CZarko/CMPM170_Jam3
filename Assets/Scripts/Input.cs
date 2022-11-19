@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem; 
 
-public class CardMaker : MonoBehaviour
+public class Input : MonoBehaviour
 {
-    public GameObject cardPrefab;
     public InputAction inputController;
     public Camera cam;
 
