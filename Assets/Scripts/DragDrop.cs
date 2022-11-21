@@ -45,6 +45,7 @@ public class DragDrop : MonoBehaviour
         if(isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
+            Destroy(this.gameObject);
         }
         else
         {
