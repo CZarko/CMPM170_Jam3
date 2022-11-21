@@ -15,4 +15,4 @@ MonoBehaviour:
   name: A11
   topic: 
   type: Intrusive
-  effect: Add 5 interest, add 10 trait
+  effect: Half all meters, silence

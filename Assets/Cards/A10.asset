@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: A10
   m_EditorClassIdentifier: 
   name: A10
-  topic: 2
+  topic: 3
   type: Conversation
   effect: Add 5 interest, add 10 trait
