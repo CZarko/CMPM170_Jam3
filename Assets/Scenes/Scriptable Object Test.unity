@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 302639351}
   m_Layer: 5
   m_Name: DateManager
-  m_TagString: Untagged
+  m_TagString: DateManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327296e833f11a147872b3250e16bb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choiceTaken: 0
+  choice: 0
 --- !u!1 &321990784
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,8 +712,8 @@ GameObject:
   - component: {fileID: 577111883}
   - component: {fileID: 577111882}
   m_Layer: 5
-  m_Name: Interest
-  m_TagString: Interest
+  m_Name: Combo
+  m_TagString: Combo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
