@@ -10,6 +10,13 @@ public class DragDrop : MonoBehaviour
     private GameObject dropZone;
     private Vector2 startPosition;
 
+    private CardFunctions cardFunctions;
+
+    private void Start()
+    {
+        cardFunctions = GetComponent<CardFunctions>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +52,8 @@ public class DragDrop : MonoBehaviour
         if(isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
+            cardFunctions.doEffect();
+
             Destroy(this.gameObject);
         }
         else

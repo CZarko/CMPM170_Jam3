@@ -16,3 +16,22 @@ MonoBehaviour:
   topic: 3
   type: Conversation
   effect: Add 5 comfort, add 10 trait
+  attractAmnt: 0
+  interestAmnt: 0
+  comfortAmnt: 5
+  traitAmnt: 10
+  halfMeters: 0
+  discardHand: 0
+  drawAmnt: 0
+  comboSetAmnt: 0
+  swoon: 0
+  topicChange: 0
+  forceFlirt: 0
+  cozify: 0
+  forceShare: 0
+  intrigue: 0
+  forceAsk: 0
+  silence: 0
+  doubleConvoEffect: 0
+  fillHand: 0
+  doubleMeter: 0
