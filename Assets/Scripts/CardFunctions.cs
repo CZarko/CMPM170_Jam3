@@ -96,20 +96,20 @@ public class CardFunctions : MonoBehaviour
 
     private void addAttract(int attractAmount)
     {
-
+        GameObject.FindWithTag("Attraction").GetComponent<Attraction>().adjust(attractAmount);
     }
     private void addInterest(int interestAmount)
     {
-
+        GameObject.FindWithTag("Interest").GetComponent<Interest>().adjust(interestAmount);
     }
     private void addComfort(int comfortAmount)
     {
-
+        GameObject.FindWithTag("Comfort").GetComponent<Comfort>().adjust(comfortAmount);
     }
 
     private void addTrait(int traitAmount)
     {
-
+        GameObject.FindWithTag("Trait").GetComponent<Trait>().adjust(traitAmount);
     }
 
     private void halfMeters()
