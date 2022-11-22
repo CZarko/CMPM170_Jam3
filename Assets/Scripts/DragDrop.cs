@@ -33,14 +33,14 @@ public class DragDrop : MonoBehaviour
 
     public void StartDrag()
     {
-        Debug.Log("Drag Start");
+        // Debug.Log("Drag Start");
         startPosition = transform.position;
         isDragging = true;
     }
 
     public void EndDrag()
     {
-        Debug.Log("Drag End");
+        // Debug.Log("Drag End");
         isDragging = false;
         if(isOverDropZone)
         {
