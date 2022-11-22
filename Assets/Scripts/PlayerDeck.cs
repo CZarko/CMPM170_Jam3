@@ -21,6 +21,7 @@ public class PlayerDeck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // updates the UI showing how many cards remain in the deck
         deckSizeText.text = deck.Count.ToString();
     }
 
@@ -28,10 +29,14 @@ public class PlayerDeck : MonoBehaviour
     {
         if(deck.Count >= 1)
         {
+            // finds a random card in the deck
             Card randCard = deck[Random.Range(0, deck.Count)];
             Debug.Log("played " + randCard);
 
+            // creates a copy of the card template
             GameObject playerCard = Instantiate(card, new Vector3(0, 0, 0), Quaternion.identity);
+
+            // loads the selected random card's data into the template
             CardDisplay _cardDisplay = playerCard.GetComponent<CardDisplay>();
             if(_cardDisplay)
             {
@@ -41,6 +46,8 @@ public class PlayerDeck : MonoBehaviour
             {
                 Debug.Log("_cardDisplay doesn't exist");
             }
+
+            // puts the card into the player's hand
             playerCard.transform.SetParent(playerArea.transform, false);
 
             deck.Remove(randCard);
