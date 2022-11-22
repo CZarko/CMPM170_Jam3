@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Date : MonoBehaviour
 {
+    public bool choiceTaken;
+    public int choice = 0;
     void takeTurn()
     {
-        int choice = Random.Range(0, 3);
+        if(!choiceTaken)
+            choice = Random.Range(0, 3);
+        else
+            choiceTaken = false;
+
         switch(choice)
         {
             case 0:

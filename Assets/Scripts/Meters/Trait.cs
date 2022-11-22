@@ -14,9 +14,9 @@ public class Trait : MonoBehaviour
         mSlider.value = trait / traitMax;
     }
 
-    internal void adjust(int adjustment)
+    internal void setTrait(float adjustment)
     {
-        trait += adjustment;
+        trait = adjustment;
         trait = Mathf.Clamp(trait, 0, traitMax);
         mSlider.value = trait / traitMax;
     }

@@ -144,6 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a696e221d487654db08e978a84d1373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  comfortMeter: {fileID: 0}
+  attractMeter: {fileID: 0}
+  interestMeter: {fileID: 0}
+  deck: {fileID: 0}
 --- !u!114 &7572834981669171579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +165,25 @@ MonoBehaviour:
   topicText: {fileID: 7572834982197234749}
   typeText: {fileID: 7572834982386961555}
   effectText: {fileID: 7572834982435391037}
+  attractAmnt: 0
+  interestAmnt: 0
+  comfortAmnt: 0
+  traitAmnt: 0
+  halfMeters: 0
+  discardHand: 0
+  drawAmnt: 0
+  comboSetAmnt: 0
+  swoon: 0
+  topicChange: 0
+  forceFlirt: 0
+  cozify: 0
+  forceShare: 0
+  intrigue: 0
+  forceAsk: 0
+  silence: 0
+  doubleConvoEffect: 0
+  fillHand: 0
+  doubleMeter: 0
 --- !u!114 &9153300793414900844
 MonoBehaviour:
   m_ObjectHideFlags: 0
