@@ -15,6 +15,7 @@ public class CardFunctions : MonoBehaviour
     public Date date;
 
     public PlayerDeck playerDeck;
+    public Topic topic;
 
     int attractionMultipier = 1;
     int interestMultiplier = 1;
@@ -31,6 +32,7 @@ public class CardFunctions : MonoBehaviour
 
         playerDeck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
         date = GameObject.FindWithTag("DateManager").GetComponent<Date>();
+        topic = GameObject.FindWithTag("Topic").GetComponent<Topic>();
     }
 
     internal void doEffect()
@@ -175,7 +177,7 @@ public class CardFunctions : MonoBehaviour
 
     private void topicChange()
     {
-
+        topic.nextTopic();
     }
 
     private void forceFlirt()
@@ -221,11 +223,15 @@ public class CardFunctions : MonoBehaviour
 
     private void fillHand()
     {
-
+        while (playerDeck.cardsInHand < 6)
+            playerDeck.drawCard();
+            
     }
 
     private void doubleMeter()
     {
-
+        attractMeter.setAttraction(attractMeter.attraction * 2);
+        interestMeter.setInterest(interestMeter.interest * 2);
+        comfortMeter.setComfort(comfortMeter.comfort * 2);
     }
 }
