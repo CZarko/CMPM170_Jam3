@@ -118,15 +118,15 @@ public class CardFunctions : MonoBehaviour
 
     private void addAttract(int attractAmount)
     {
-        attractMeter.setAttraction(attractMeter.attraction + attractAmount);
+        attractMeter.setAttraction(attractMeter.attraction + attractAmount * attractionMultipier);
     }
     private void addInterest(int interestAmount)
     {
-        interestMeter.setInterest(interestAmount + interestMeter.interest);
+        interestMeter.setInterest(interestAmount*interestMultiplier + interestMeter.interest);
     }
     private void addComfort(int comfortAmount)
     {
-        comfortMeter.setComfort(comfortAmount + comfortMeter.comfort);
+        comfortMeter.setComfort(comfortAmount *comfortMultiplier + comfortMeter.comfort);
     }
 
     private void addTrait(int traitAmount)
@@ -148,7 +148,10 @@ public class CardFunctions : MonoBehaviour
         foreach(GameObject card in cards)
         {
             Destroy(card);
+            playerDeck.setCards(-1);
         }
+        playerDeck.setCards(1);
+
     }
 
     private void draw(int drawAmount)
