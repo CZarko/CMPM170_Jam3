@@ -11,6 +11,8 @@ TagManager:
   - Trait
   - Card
   - Deck
+  - Combo
+  - DateManager
   layers:
   - Default
   - TransparentFX
