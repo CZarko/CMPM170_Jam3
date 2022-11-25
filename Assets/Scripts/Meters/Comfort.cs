@@ -13,10 +13,14 @@ public class Comfort : MonoBehaviour
     {
         mSlider.value = comfort/comfortMax;
     }
-    internal void adjust(int adjustment)
+    internal void setComfort(float adjustment)
     {
-        comfort += adjustment;
+        comfort = adjustment;
         comfort = Mathf.Clamp(comfort, 0, comfortMax);
         mSlider.value = comfort / comfortMax;
+    }
+    internal void halfComfort()
+    {
+        comfort = comfort / 2;
     }
 }

@@ -13,9 +13,9 @@ public class Interest : MonoBehaviour
     {
         mSlider.value = interest/interestMax;
     }
-    internal void adjust(int adjustment)
+    internal void setInterest(float adjustment)
     {
-        interest += adjustment;
+        interest = adjustment;
         interest = Mathf.Clamp(interest, 0, interestMax);
         mSlider.value = interest/interestMax; 
     }

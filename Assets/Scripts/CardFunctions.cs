@@ -1,14 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardFunctions : MonoBehaviour
 {
     private CardDisplay cardDisplay;
 
+    public Trait traitMeter;
+    public Comfort comfortMeter;
+    public Attraction attractMeter;
+    public Interest interestMeter;
+    public Combo comboMeter;
+    public Date date;
+
+    public PlayerDeck playerDeck;
+
+    int attractionMultipier = 1;
+    int interestMultiplier = 1;
+    int comfortMultiplier = 1;
+
     private void Start()
     {
         cardDisplay = GetComponent<CardDisplay>();
+        traitMeter = GameObject.FindWithTag("Trait").GetComponent<Trait>();
+        comfortMeter = GameObject.FindWithTag("Comfort").GetComponent<Comfort>();
+        attractMeter = GameObject.FindWithTag("Attraction").GetComponent<Attraction>();
+        interestMeter = GameObject.FindWithTag("Interest").GetComponent<Interest>();
+        comboMeter = GameObject.FindWithTag("Combo").GetComponent <Combo>();
+
+        playerDeck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
+        date = GameObject.FindWithTag("DateManager").GetComponent<Date>();
     }
 
     internal void doEffect()
@@ -96,45 +118,56 @@ public class CardFunctions : MonoBehaviour
 
     private void addAttract(int attractAmount)
     {
-        GameObject.FindWithTag("Attraction").GetComponent<Attraction>().adjust(attractAmount);
+        attractMeter.setAttraction(attractMeter.attraction + attractAmount);
     }
     private void addInterest(int interestAmount)
     {
-        GameObject.FindWithTag("Interest").GetComponent<Interest>().adjust(interestAmount);
+        interestMeter.setInterest(interestAmount + interestMeter.interest);
     }
     private void addComfort(int comfortAmount)
     {
-        GameObject.FindWithTag("Comfort").GetComponent<Comfort>().adjust(comfortAmount);
+        comfortMeter.setComfort(comfortAmount + comfortMeter.comfort);
     }
 
     private void addTrait(int traitAmount)
     {
-        GameObject.FindWithTag("Trait").GetComponent<Trait>().adjust(traitAmount);
+        traitMeter.setTrait(traitAmount + traitMeter.trait);
     }
 
     private void halfMeters()
     {
+        comfortMeter.setComfort(comfortMeter.comfort/2);
+        attractMeter.setAttraction(attractMeter.attraction/2);
+        interestMeter.setInterest(interestMeter.interest / 2);
 
     }
 
     private void discardHand()
     {
-
+        GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
+        foreach(GameObject card in cards)
+        {
+            Destroy(card);
+        }
     }
 
     private void draw(int drawAmount)
     {
-
+        while(drawAmount > 0)
+        {
+            drawAmount--;
+            playerDeck.drawCard();
+        }
     }
 
     private void setCombo(int newCombo)
     {
-
+        comboMeter.setCombo(newCombo);
     }
 
     private void swoon()
     {
-
+        attractionMultipier = 2;
     }
 
     private void topicChange()
@@ -144,37 +177,43 @@ public class CardFunctions : MonoBehaviour
 
     private void forceFlirt()
     {
-
+        date.choice = 2;
+        date.choiceTaken = true;
     }
 
     private void cozify()
     {
-
+        comfortMultiplier = 2;
     }
 
     private void forceShare()
     {
-
+        date.choice = 1;
+        date.choiceTaken = true;
     }
 
     private void intrigue()
     {
-
+        interestMultiplier = 2;
     }
 
     private void forceAsk()
     {
-
+        date.choice = 0;
+        date.choiceTaken = true;
     }
 
     private void silence()
     {
-
+        date.choice = 4;
+        date.choiceTaken = true;
     }
 
     private void doubleConvoEffect()
     {
-
+        attractionMultipier = 2;
+        interestMultiplier = 2;
+        comfortMultiplier = 2;
     }
 
     private void fillHand()

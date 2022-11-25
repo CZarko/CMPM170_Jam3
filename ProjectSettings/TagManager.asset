@@ -9,6 +9,8 @@ TagManager:
   - Interest
   - Comfort
   - Trait
+  - Card
+  - Deck
   layers:
   - Default
   - TransparentFX

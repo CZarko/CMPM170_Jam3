@@ -14,9 +14,9 @@ public class Attraction : MonoBehaviour
     {
         mSlider.value = attraction / attractionMax;
     }
-    internal void adjust(int adjustment)
+    internal void setAttraction(float adjustment)
     {
-        attraction += adjustment;
+        attraction = adjustment;
         attraction = Mathf.Clamp(attraction, 0, attractionMax);
         mSlider.value = attraction/attractionMax;
     }
