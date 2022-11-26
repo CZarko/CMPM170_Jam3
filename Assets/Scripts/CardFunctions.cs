@@ -15,6 +15,7 @@ public class CardFunctions : MonoBehaviour
     public Date date;
 
     public PlayerDeck playerDeck;
+    public Topic topic;
 
     int attractionMultipier = 1;
     int interestMultiplier = 1;
@@ -31,6 +32,7 @@ public class CardFunctions : MonoBehaviour
 
         playerDeck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
         date = GameObject.FindWithTag("DateManager").GetComponent<Date>();
+        topic = GameObject.FindWithTag("Topic").GetComponent<Topic>();
     }
 
     internal void doEffect()
@@ -118,15 +120,15 @@ public class CardFunctions : MonoBehaviour
 
     private void addAttract(int attractAmount)
     {
-        attractMeter.setAttraction(attractMeter.attraction + attractAmount);
+        attractMeter.setAttraction(attractMeter.attraction + attractAmount * attractionMultipier);
     }
     private void addInterest(int interestAmount)
     {
-        interestMeter.setInterest(interestAmount + interestMeter.interest);
+        interestMeter.setInterest(interestAmount*interestMultiplier + interestMeter.interest);
     }
     private void addComfort(int comfortAmount)
     {
-        comfortMeter.setComfort(comfortAmount + comfortMeter.comfort);
+        comfortMeter.setComfort(comfortAmount *comfortMultiplier + comfortMeter.comfort);
     }
 
     private void addTrait(int traitAmount)
@@ -148,7 +150,10 @@ public class CardFunctions : MonoBehaviour
         foreach(GameObject card in cards)
         {
             Destroy(card);
+            playerDeck.setCards(-1);
         }
+        playerDeck.setCards(1);
+
     }
 
     private void draw(int drawAmount)
@@ -172,7 +177,7 @@ public class CardFunctions : MonoBehaviour
 
     private void topicChange()
     {
-
+        topic.nextTopic();
     }
 
     private void forceFlirt()
@@ -218,11 +223,15 @@ public class CardFunctions : MonoBehaviour
 
     private void fillHand()
     {
-
+        while (playerDeck.cardsInHand < 6)
+            playerDeck.drawCard();
+            
     }
 
     private void doubleMeter()
     {
-
+        attractMeter.setAttraction(attractMeter.attraction * 2);
+        interestMeter.setInterest(interestMeter.interest * 2);
+        comfortMeter.setComfort(comfortMeter.comfort * 2);
     }
 }

@@ -12,23 +12,28 @@ public class PlayerDeck : MonoBehaviour
 
     public TMP_Text deckSizeText;
 
-    // Start is called before the first frame update
-    void Start()
+    public int cardsInHand;
+
+    private void Start()
     {
-        
+        cardsInHand = 0;
+        deckSizeText.text = deck.Count.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void setCards(int cards)
     {
-        // updates the UI showing how many cards remain in the deck
-        deckSizeText.text = deck.Count.ToString();
+        if (cards == -1)
+            cardsInHand--;
+        else
+            cardsInHand = cards;
     }
 
     public void drawCard()
     {
         if(deck.Count >= 1)
         {
+            print("DRAW!");
+            cardsInHand++;
             // finds a random card in the deck
             Card randCard = deck[Random.Range(0, deck.Count)];
             Debug.Log("played " + randCard);
@@ -51,6 +56,10 @@ public class PlayerDeck : MonoBehaviour
             playerCard.transform.SetParent(playerArea.transform, false);
 
             deck.Remove(randCard);
+
+            // updates the UI showing how many cards remain in the deck
+            deckSizeText.text = deck.Count.ToString();
+
         }
     }
 }

@@ -11,10 +11,13 @@ public class DragDrop : MonoBehaviour
     private Vector2 startPosition;
 
     private CardFunctions cardFunctions;
+    private PlayerDeck deck;
+
 
     private void Start()
     {
         cardFunctions = GetComponent<CardFunctions>();
+        deck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,7 @@ public class DragDrop : MonoBehaviour
             cardFunctions.doEffect();
 
             Destroy(this.gameObject);
+            deck.setCards(-1);
         }
         else
         {
