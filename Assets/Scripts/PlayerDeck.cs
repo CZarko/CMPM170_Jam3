@@ -13,11 +13,34 @@ public class PlayerDeck : MonoBehaviour
     public TMP_Text deckSizeText;
 
     public int cardsInHand;
+    public int drawAmount;
 
+    public Combo combo;
+
+    private void Awake()
+    {
+        drawAmount = 4;
+    }
     private void Start()
     {
+        combo = GameObject.FindWithTag("Combo").GetComponent<Combo>();
+
         cardsInHand = 0;
         deckSizeText.text = deck.Count.ToString();
+        //draw 4 cards to start turn
+        for(int i = 0; i < drawAmount; i++)
+        {
+            drawCard();
+        }
+        drawAmount = 2;
+    }
+
+    public void takeTurn()
+    {
+        for (int i = 0; i < drawAmount; i++)
+            drawCard();
+        combo.adjustCombo(-1);
+        drawAmount = 2;
     }
 
     public void setCards(int cards)

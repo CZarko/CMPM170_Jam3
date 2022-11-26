@@ -69,7 +69,7 @@ public class CardFunctions : MonoBehaviour
         }
         if(cardDisplay.comboSetAmnt > 0)
         {
-            setCombo(cardDisplay.comboSetAmnt);
+            setCombo(cardDisplay.comboSetAmnt - 1);
         }
         if(cardDisplay.swoon)
         {

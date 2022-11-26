@@ -19,4 +19,11 @@ public class Combo : MonoBehaviour
         combo = Mathf.Clamp(combo, 0, comboMax);
         mSlider.value = combo;
     }
+    internal void adjustCombo(int toAdd)
+    {
+        print("ADJUST COMBO");
+        combo += toAdd;
+        combo = Mathf.Clamp(combo, 0, comboMax);
+        mSlider.value = combo;
+    }
 }

@@ -38,7 +38,7 @@ public class Date : MonoBehaviour
     }
     void flirt()
     {
-        print("FLIRT");
+        GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>().drawAmount = 4;
     }
 
 }

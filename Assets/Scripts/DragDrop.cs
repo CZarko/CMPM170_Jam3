@@ -13,11 +13,14 @@ public class DragDrop : MonoBehaviour
     private CardFunctions cardFunctions;
     private PlayerDeck deck;
 
+    private Combo combo;
+
 
     private void Start()
     {
         cardFunctions = GetComponent<CardFunctions>();
         deck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
+        combo = GameObject.FindWithTag("Combo").GetComponent<Combo>();
     }
 
     // Update is called once per frame
@@ -56,9 +59,10 @@ public class DragDrop : MonoBehaviour
         {
             transform.SetParent(dropZone.transform, false);
             cardFunctions.doEffect();
+            combo.adjustCombo(1);
+            deck.setCards(-1);
 
             Destroy(this.gameObject);
-            deck.setCards(-1);
         }
         else
         {
