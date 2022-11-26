@@ -33,7 +33,7 @@ public class Date : MonoBehaviour
     void share()
     {
         print("SHARE");
-        GameObject.FindWithTag("Topic").GetComponent<Topic>().setTopic("Beans");
+        GameObject.FindWithTag("Topic").GetComponent<Topic>().nextTopic();
 
     }
     void flirt()
