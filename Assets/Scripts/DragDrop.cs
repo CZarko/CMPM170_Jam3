@@ -53,7 +53,7 @@ public class DragDrop : MonoBehaviour
         startPosition = transform.position;
         isDragging = true;
 
-        RuntimeManager.PlayOneShot("event:/SFX/cardDraw");
+        PlayPannedSound("event:/SFX/cardDraw");
     }
 
     public void EndDrag()
@@ -68,12 +68,21 @@ public class DragDrop : MonoBehaviour
             deck.setCards(-1);
 
             Destroy(this.gameObject);
+
+            PlayPannedSound("event:/SFX/cardPlay");
         }
         else
         {
             transform.position = startPosition;
-        }
 
-        RuntimeManager.CreateInstance("event:/SFX/cardPlay").start(); // Update to use two different sounds depending on context
+            PlayPannedSound("event:/SFX/cardPlace");
+        }
+    }
+
+    private void PlayPannedSound(string soundEvent)
+    {
+        FMOD.Studio.EventInstance soundToPlay = FMODUnity.RuntimeManager.CreateInstance(soundEvent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Panning Amount", transform.position.x);
+        soundToPlay.start();
     }
 }

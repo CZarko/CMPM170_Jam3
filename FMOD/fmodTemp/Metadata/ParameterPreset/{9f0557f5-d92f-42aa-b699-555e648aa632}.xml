@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9f0557f5-d92f-42aa-b699-555e648aa632}">
+		<property name="name">
+			<value>Panning Amount</value>
+		</property>
+		<relationship name="folder">
+			<destination>{88ff9d63-f2bf-473a-b247-613cbc314268}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4588b490-e234-4e16-a48f-35b77ab9a0b6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4588b490-e234-4e16-a48f-35b77ab9a0b6}">
+		<property name="minimum">
+			<value>400</value>
+		</property>
+		<property name="maximum">
+			<value>700</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>700</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
