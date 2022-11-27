@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A6
   m_EditorClassIdentifier: 
   name: A6
-  topic: 2
+  topic: Video Games
   type: Conversation
   effect: Add 5 comfort, add 10 trait
   attractAmnt: 0

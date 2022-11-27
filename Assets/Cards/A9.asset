@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A9
   m_EditorClassIdentifier: 
   name: A9
-  topic: 2
+  topic: Video Games
   type: Conversation
   effect: Add 5 interest, add 10 trait
   attractAmnt: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A4
   m_EditorClassIdentifier: 
   name: A4
-  topic: 3
+  topic: Food
   type: Conversation
   effect: Add 5 attract, add 10 trait
   attractAmnt: 5

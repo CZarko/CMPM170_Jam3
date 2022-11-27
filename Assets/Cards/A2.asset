@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A2
   m_EditorClassIdentifier: 
   name: A2
-  topic: 1
+  topic: Programming
   type: Conversation
   effect: Add 5 attract, add 10 trait
   attractAmnt: 5
