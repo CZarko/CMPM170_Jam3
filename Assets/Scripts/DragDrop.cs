@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using FMODUnity;
 
 public class DragDrop : MonoBehaviour
 {
-    private bool isDragging = false;
-    private bool isOverDropZone = false;
-    private GameObject dropZone;
-    private Vector2 startPosition;
 
-    private CardFunctions cardFunctions;
-    private PlayerDeck deck;
+    [Header("Card Properties")] 
 
-    private Combo combo;
+        private bool isDragging = false;
+        private bool isOverDropZone = false;
+        private GameObject dropZone;
+        private Vector2 startPosition;
 
+        private CardFunctions cardFunctions;
+        private PlayerDeck deck;
+
+        private Combo combo;
 
     private void Start()
     {
@@ -46,14 +49,16 @@ public class DragDrop : MonoBehaviour
 
     public void StartDrag()
     {
-        // Debug.Log("Drag Start");
+        //Debug.Log("Drag Start");
         startPosition = transform.position;
         isDragging = true;
+
+        RuntimeManager.PlayOneShot("event:/SFX/cardDraw");
     }
 
     public void EndDrag()
     {
-        // Debug.Log("Drag End");
+        //Debug.Log("Drag End");
         isDragging = false;
         if(isOverDropZone)
         {
@@ -68,5 +73,7 @@ public class DragDrop : MonoBehaviour
         {
             transform.position = startPosition;
         }
+
+        RuntimeManager.CreateInstance("event:/SFX/cardPlay").start(); // Update to use two different sounds depending on context
     }
 }
