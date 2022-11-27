@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e063673e-1e1e-4dd0-bca4-d421fc5632ee}">
+		<property name="assetPath">
+			<value>sfx_playCard.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.21428571428571427</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8e892149-4292-45b9-bc37-40d7172b82e0}</destination>
+		</relationship>
+	</object>
+</objects>
