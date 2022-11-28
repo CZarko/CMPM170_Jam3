@@ -83,6 +83,7 @@ public class PlayerDeck : MonoBehaviour
             // updates the UI showing how many cards remain in the deck
             deckSizeText.text = deck.Count.ToString();
 
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/cardDrawMult");
         }
     }
 }
