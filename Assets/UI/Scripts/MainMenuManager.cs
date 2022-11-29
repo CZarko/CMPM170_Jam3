@@ -17,6 +17,8 @@ public class MainMenuManager : MonoBehaviour {
     public void Play() {
         stm.FadeIn();
         StartCoroutine(DelayPlay());
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MUS/menuStop");
     }
 
     public void Credits() {

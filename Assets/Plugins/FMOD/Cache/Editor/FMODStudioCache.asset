@@ -142,10 +142,10 @@ MonoBehaviour:
   Path: FMOD/fmodTemp/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638053120914097297
+  lastModified: 638053223917111525
   FileSizes:
   - Name: Desktop
-    Value: 9708160
+    Value: 10535680
   Exists: 1
 --- !u!114 &-781839370147548590
 MonoBehaviour:
@@ -225,6 +225,8 @@ MonoBehaviour:
   - {fileID: -781839370147548590}
   - {fileID: 5089734871474784980}
   - {fileID: 1331905238340692500}
+  - {fileID: 3652113057002242951}
+  - {fileID: 2296599215893894889}
   EditorParameters:
   - {fileID: -6409399494096431597}
   - {fileID: 662677218461547137}
@@ -232,7 +234,7 @@ MonoBehaviour:
   - {fileID: -4087083274951071208}
   StringsBanks:
   - {fileID: 4959629599946810327}
-  cacheTime: 638053120914167349
+  cacheTime: 638053223917171744
   cacheVersion: 131591
 --- !u!114 &100518532770487689
 MonoBehaviour:
@@ -420,6 +422,60 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &2296599215893894889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUS/menuStop
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/menuStop
+  Guid:
+    Data1: -471352698
+    Data2: 1334191387
+    Data3: 1595429813
+    Data4: -1091023006
+  Banks:
+  - {fileID: -4087083274951071208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3652113057002242951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUS/menu
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/menu
+  Guid:
+    Data1: -434581457
+    Data2: 1103409001
+    Data3: 844439730
+    Data4: 1958221278
+  Banks:
+  - {fileID: -4087083274951071208}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4959629599946810327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,10 +491,10 @@ MonoBehaviour:
   Path: FMOD/fmodTemp/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638053120914167349
+  lastModified: 638053223917171744
   FileSizes:
   - Name: Desktop
-    Value: 1342
+    Value: 1436
   Exists: 1
 --- !u!114 &5061233914648757481
 MonoBehaviour:
