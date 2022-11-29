@@ -30,6 +30,8 @@ public class Date : MonoBehaviour
     void ask()
     {
         print("ASK");
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/dateAsk");
     }
     void share()
     {
@@ -40,6 +42,8 @@ public class Date : MonoBehaviour
     void flirt()
     {
         GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>().drawAmount = 4;
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/dateFlirt");
     }
 
 }
