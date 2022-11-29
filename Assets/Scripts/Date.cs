@@ -38,6 +38,8 @@ public class Date : MonoBehaviour
         print("SHARE");
         GameObject.FindWithTag("Topic").GetComponent<Topic>().nextTopic();
 
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/dateShare");
+
     }
     void flirt()
     {
