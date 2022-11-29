@@ -27,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7351493926583012188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/battleSetToBasic/chooseMusVer
+  m_EditorClassIdentifier: 
+  Name: chooseMusVer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 33798175
+    data2: 1702772683
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-6409399494096431597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +98,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 5061233914648757481}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -117,10 +142,10 @@ MonoBehaviour:
   Path: FMOD/fmodTemp/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638052499656571278
+  lastModified: 638053120914097297
   FileSizes:
   - Name: Desktop
-    Value: 7160160
+    Value: 9708160
   Exists: 1
 --- !u!114 &-781839370147548590
 MonoBehaviour:
@@ -198,13 +223,16 @@ MonoBehaviour:
   - {fileID: -8672426418316818929}
   - {fileID: 155465571003747726}
   - {fileID: -781839370147548590}
+  - {fileID: 5089734871474784980}
+  - {fileID: 1331905238340692500}
   EditorParameters:
   - {fileID: -6409399494096431597}
+  - {fileID: 662677218461547137}
   MasterBanks:
   - {fileID: -4087083274951071208}
   StringsBanks:
   - {fileID: 4959629599946810327}
-  cacheTime: 638052499656581197
+  cacheTime: 638053120914167349
   cacheVersion: 131591
 --- !u!114 &100518532770487689
 MonoBehaviour:
@@ -261,6 +289,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &662677218461547137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/chooseMusVer
+  m_EditorClassIdentifier: 
+  Name: chooseMusVer
+  StudioPath: parameter:/chooseMusVer
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 33798175
+    data2: 1702772683
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &1102440852248542139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +337,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1331905238340692500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUS/battleSetToPause
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/battleSetToPause
+  Guid:
+    Data1: 348879578
+    Data2: 1312162846
+    Data3: -891443048
+    Data4: -1248276769
+  Banks:
+  - {fileID: -4087083274951071208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6514847229596238608}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -355,11 +435,63 @@ MonoBehaviour:
   Path: FMOD/fmodTemp/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638052499656581197
+  lastModified: 638053120914167349
   FileSizes:
   - Name: Desktop
-    Value: 1186
+    Value: 1342
   Exists: 1
+--- !u!114 &5061233914648757481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/cafe/chooseMusVer
+  m_EditorClassIdentifier: 
+  Name: chooseMusVer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 33798175
+    data2: 1702772683
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5089734871474784980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUS/battleSetToBasic
+  m_EditorClassIdentifier: 
+  Path: event:/MUS/battleSetToBasic
+  Guid:
+    Data1: -1212519998
+    Data2: 1209103736
+    Data3: 764014509
+    Data4: 76228878
+  Banks:
+  - {fileID: -4087083274951071208}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7351493926583012188}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5976164192513757593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,10 +515,35 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 8418358366812720043}
   MinDistance: 1
   MaxDistance: 20
   Length: 185454
+--- !u!114 &6514847229596238608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/battleSetToPause/chooseMusVer
+  m_EditorClassIdentifier: 
+  Name: chooseMusVer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 33798175
+    data2: 1702772683
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &7774422535990269303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,3 +572,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 428
+--- !u!114 &8418358366812720043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/battleBasic/chooseMusVer
+  m_EditorClassIdentifier: 
+  Name: chooseMusVer
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 33798175
+    data2: 1702772683
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
