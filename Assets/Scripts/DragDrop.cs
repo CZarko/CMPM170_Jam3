@@ -7,7 +7,7 @@ using FMODUnity;
 public class DragDrop : MonoBehaviour
 {
 
-    [Header("Card Properties")] 
+    [Header("Card Properties")]
 
         private bool isDragging = false;
         private bool isOverDropZone = false;
@@ -31,7 +31,7 @@ public class DragDrop : MonoBehaviour
     {
         if(isDragging)
         {
-            transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
         }
     }
 
