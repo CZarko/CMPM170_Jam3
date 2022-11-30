@@ -603,7 +603,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: This is a game made by - Caleb Zarko, Joe Frumenti, Jonathan "Jonty" Lewis,
-    Martin P, Melissa Liu, Sam Tancio, Sophie Martin, Stephanie Styffe, and Vivian
+    Justin Beedle, Martin P, Melissa Liu, Sam Tancio, Sophie Martin, Stephanie Styffe,
+    and Vivian
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1162,7 +1163,7 @@ GameObject:
   - component: {fileID: 1608445624}
   - component: {fileID: 1608445623}
   m_Layer: 0
-  m_Name: MusPlayer
+  m_Name: Music Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608445622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.944444, y: -0.39833122, z: -9.939886}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
