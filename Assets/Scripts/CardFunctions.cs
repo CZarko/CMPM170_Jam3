@@ -20,6 +20,11 @@ public class CardFunctions : MonoBehaviour
     int attractionMultipier = 1;
     int interestMultiplier = 1;
     int comfortMultiplier = 1;
+    int topicMultiplier = 1;
+
+    float traitMultiplier;
+
+
 
     private void Start()
     {
@@ -35,8 +40,25 @@ public class CardFunctions : MonoBehaviour
         topic = GameObject.FindWithTag("Topic").GetComponent<Topic>();
     }
 
+    private void calculateMultipliers()
+    {
+        float attractMultiplier = attractMeter.attraction/10f + 1;
+        float interestMultiplier = interestMeter.interest / 10f + 1;
+        float comfortMultiplier = comfortMeter.comfort / 10f + 1;
+        float comboMultiplier = comboMeter.combo + 1;
+
+        if (cardDisplay.topicText == topic.topicDisplay)
+            topicMultiplier = 2;
+        else
+            topicMultiplier = 1;
+
+        traitMultiplier = attractMultiplier + interestMultiplier + comfortMultiplier + comboMultiplier + topicMultiplier;
+
+    }
+
     internal void doEffect()
     {
+        calculateMultipliers();
 
         //print(cardDisplay.attractAmnt); leaving here for reference
         if(cardDisplay.attractAmnt > 0)
@@ -124,16 +146,16 @@ public class CardFunctions : MonoBehaviour
     }
     private void addInterest(int interestAmount)
     {
-        interestMeter.setInterest(interestAmount*interestMultiplier + interestMeter.interest);
+        interestMeter.setInterest(interestAmount * interestMultiplier + interestMeter.interest);
     }
     private void addComfort(int comfortAmount)
     {
-        comfortMeter.setComfort(comfortAmount *comfortMultiplier + comfortMeter.comfort);
+        comfortMeter.setComfort(comfortAmount * comfortMultiplier + comfortMeter.comfort);
     }
 
     private void addTrait(int traitAmount)
     {
-        traitMeter.setTrait(traitAmount + traitMeter.trait);
+        traitMeter.setTrait(traitAmount * traitMultiplier + traitMeter.trait);
     }
 
     private void halfMeters()

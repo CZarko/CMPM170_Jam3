@@ -2,13 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20207 (125130), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 11.61ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000C9D8F0C618 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000022C3BFDC908 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,209 +18,10 @@
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C6C091F258
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C6C091F258
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C92DACA0F8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C92DACA0F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C8E0423AD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C8E0423AD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C92DACA2A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C92DACA2A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C8E0423C88
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C8E0423C88
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_drawCard1', format=5, channels=2, frequency=48000, lengthbytes=5856, lengthpcm=20571, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.221985.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_drawCard2', format=5, channels=2, frequency=48000, lengthbytes=3328, lengthpcm=11571, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.348572.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_playCard', format=5, channels=2, frequency=48000, lengthbytes=3360, lengthpcm=10285, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.936249.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='powerUp_1', format=5, channels=1, frequency=48000, lengthbytes=5440, lengthpcm=25165, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.304688.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_placeCard', format=5, channels=2, frequency=48000, lengthbytes=2784, lengthpcm=9428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.462952.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_flirt', format=5, channels=2, frequency=48000, lengthbytes=30016, lengthpcm=122143, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.440735.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000C6C0A30BB8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='random_2', format=5, channels=1, frequency=48000, lengthbytes=13664, lengthpcm=73333, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.476563.
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C6C091F258
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady :     Loading delay exceeded, sound may play at incorrect time
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C6C091F258
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C92DACA0F8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C92DACA0F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C8E0423AD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C8E0423AD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C92DACA2A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C92DACA2A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000C8E0423C88
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000C8E0423C88
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 10801504
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 29216
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000C8DA9CF1A8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF850F746D0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF850F746A0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF850F747A0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF850F74860
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000CA0C1B92F8
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='sfx_ask', format=5, channels=2, frequency=48000, lengthbytes=30848, lengthpcm=125786, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.427948.
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : ambLayer2 (000000C8DA5553F8)
-[LOG] SoundI::release                          :     ambLayer2 (000000CA09922128)
-[LOG] SoundI::release                          :     ambLayer2 (000000C8E0423AD8)
-[LOG] SoundI::release                          : ambLayer3 (000000C8DA555098)
-[LOG] SoundI::release                          :     ambLayer3 (000000CA099215C8)
-[LOG] SoundI::release                          :     ambLayer3 (000000C8E0423C88)
-[LOG] SoundI::release                          : ambLayer4 (000000C8DA555248)
-[LOG] SoundI::release                          :     ambLayer4 (000000CA09921DE8)
-[LOG] SoundI::release                          :     ambLayer4 (000000C92DACA2A8)
-[LOG] SoundI::release                          : ambLayer1 (000000C8DA555908)
-[LOG] SoundI::release                          :     ambLayer1 (000000CA0991F3A8)
-[LOG] SoundI::release                          :     ambLayer1 (000000C92DACA0F8)
-[LOG] SoundI::release                          : mus_battleBasic (000000C8DA555AB8)
-[LOG] SoundI::release                          :     mus_battleBasic (000000CA099210E8)
-[LOG] SoundI::release                          :     mus_battleBasic (000000C6C091F258)
-[LOG] SoundI::release                          : mus_battlePause (000000C6C091FE28)
-[LOG] SoundI::release                          :     mus_battlePause (000000CA09922AE8)
-[LOG] SoundI::release                          :     mus_battlePause (000000C6C091F0A8)
-[LOG] SoundI::release                          :  (000000C82AAC4B18)
-[LOG] SoundI::release                          :     sfx_flirt (000000CA0C16CAC8)
-[LOG] SoundI::release                          :  (000000C9D7B6F188)
-[LOG] SoundI::release                          :     sfx_cardShufflev4 (000000CA09920A68)
-[LOG] SoundI::release                          :  (000000C9D7B6FD08)
-[LOG] SoundI::release                          :     powerUp_1 (000000CA0C16CC68)
-[LOG] SoundI::release                          :  (000000C82AAC46C8)
-[LOG] SoundI::release                          :     sfx_drawCard1 (000000CA0C16B8E8)
-[LOG] SoundI::release                          :  (000000C82AAC4838)
-[LOG] SoundI::release                          :     sfx_drawCard2 (000000CA0C16B748)
-[LOG] SoundI::release                          :  (000000C8D5D65898)
-[LOG] SoundI::release                          :     random_2 (000000CA0C16A228)
-[LOG] SoundI::release                          :  (000000C9D7B6F2F8)
-[LOG] SoundI::release                          :     sfx_placeCard (000000CA0C16A708)
-[LOG] SoundI::release                          :  (000000C8D5D64FF8)
-[LOG] SoundI::release                          :     sfx_ask (000000CA0C16B0C8)
-[LOG] SoundI::release                          :  (000000C9D7B6F018)
-[LOG] SoundI::release                          :     sfx_playCard (000000CA0C16BA88)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
