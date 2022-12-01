@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interest : MonoBehaviour
 {
-    int interest = 0;
-    void adjust(int adjustment)
+    private float interestMax = 40f;
+    public float interest = 0;
+    public Slider mSlider;
+
+    private void Start()
     {
-        interest += adjustment;
-        interest = Mathf.Clamp(adjustment, 0, 100);
+        mSlider.value = interest/interestMax;
+    }
+    internal void setInterest(float adjustment)
+    {
+        interest = adjustment;
+        interest = Mathf.Clamp(interest, 0, interestMax);
+        mSlider.value = interest/interestMax; 
     }
 }

@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Attraction : MonoBehaviour
 {
     //made public for easier debugging
-    public int attraction = 0;
-    void adjust(int adjustment)
+    internal float attraction = 0;
+    private float attractionMax = 40f;
+    public Slider mSlider;
+
+    private void Start()
     {
-        attraction += adjustment;
-        attraction = Mathf.Clamp(adjustment, 0, 100);
+        mSlider.value = attraction / attractionMax;
+    }
+    internal void setAttraction(float adjustment)
+    {
+        attraction = adjustment;
+        attraction = Mathf.Clamp(attraction, 0, attractionMax);
+        mSlider.value = attraction/attractionMax;
     }
 }

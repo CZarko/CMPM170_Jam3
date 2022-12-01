@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b1c96dee-1d05-4ee0-8439-cde40fb3457b}">
+		<property name="name">
+			<value>comboPitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{88ff9d63-f2bf-473a-b247-613cbc314268}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{533f7dc7-cb1e-4c0f-ac3c-830221de5423}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{533f7dc7-cb1e-4c0f-ac3c-830221de5423}">
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

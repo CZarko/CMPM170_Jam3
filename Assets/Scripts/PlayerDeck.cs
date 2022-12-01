@@ -12,23 +12,51 @@ public class PlayerDeck : MonoBehaviour
 
     public TMP_Text deckSizeText;
 
-    // Start is called before the first frame update
-    void Start()
+    public int cardsInHand;
+    public int drawAmount;
+
+    public Combo combo;
+
+    private void Awake()
     {
-        
+        drawAmount = 4;
+    }
+    private void Start()
+    {
+        combo = GameObject.FindWithTag("Combo").GetComponent<Combo>();
+
+        cardsInHand = 0;
+        deckSizeText.text = deck.Count.ToString();
+        //draw 4 cards to start turn
+        for(int i = 0; i < drawAmount; i++)
+        {
+            drawCard();
+        }
+        drawAmount = 2;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void takeTurn()
     {
-        // updates the UI showing how many cards remain in the deck
-        deckSizeText.text = deck.Count.ToString();
+        for (int i = 0; i < drawAmount; i++)
+            drawCard();
+        combo.adjustCombo(-1);
+        drawAmount = 2;
+    }
+
+    public void setCards(int cards)
+    {
+        if (cards == -1)
+            cardsInHand--;
+        else
+            cardsInHand = cards;
     }
 
     public void drawCard()
     {
         if(deck.Count >= 1)
         {
+            print("DRAW!");
+            cardsInHand++;
             // finds a random card in the deck
             Card randCard = deck[Random.Range(0, deck.Count)];
             Debug.Log("played " + randCard);
@@ -51,6 +79,11 @@ public class PlayerDeck : MonoBehaviour
             playerCard.transform.SetParent(playerArea.transform, false);
 
             deck.Remove(randCard);
+
+            // updates the UI showing how many cards remain in the deck
+            deckSizeText.text = deck.Count.ToString();
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/cardDrawMult");
         }
     }
 }

@@ -1,13 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Trait : MonoBehaviour
 {
-    int trait = 0;
-    void adjust(int adjustment)
+    private float traitMax = 30f;
+    public float trait = 0;
+    public Slider mSlider;
+
+    public int traitsLearned = 0;
+
+    private void Start()
     {
-        trait += adjustment;
-        trait = Mathf.Clamp(adjustment, 0, 100);
+        mSlider.value = trait / traitMax;
+    }
+
+    internal void setTrait(float adjustment)
+    {
+        trait = adjustment;
+        trait = Mathf.Clamp(trait, 0, traitMax);
+        if (trait > traitMax)
+            resetMeter();
+        mSlider.value = trait / traitMax;
+    }
+
+    private void resetMeter()
+    {
+        traitsLearned ++;
+        trait -= traitMax;
+        if(trait > traitMax)
+        {
+            resetMeter();
+        }
     }
 }

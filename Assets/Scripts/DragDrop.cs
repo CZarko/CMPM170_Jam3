@@ -2,20 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using FMODUnity;
 
 public class DragDrop : MonoBehaviour
 {
-    private bool isDragging = false;
-    private bool isOverDropZone = false;
-    private GameObject dropZone;
-    private Vector2 startPosition;
+
+    [Header("Card Properties")]
+
+        private bool isDragging = false;
+        private bool isOverDropZone = false;
+        private GameObject dropZone;
+        private Vector2 startPosition;
+
+        private CardFunctions cardFunctions;
+        private PlayerDeck deck;
+
+        private Combo combo;
+
+    private void Start()
+    {
+        cardFunctions = GetComponent<CardFunctions>();
+        deck = GameObject.FindWithTag("Deck").GetComponent<PlayerDeck>();
+        combo = GameObject.FindWithTag("Combo").GetComponent<Combo>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if(isDragging)
         {
-            transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
         }
     }
 
@@ -33,23 +49,40 @@ public class DragDrop : MonoBehaviour
 
     public void StartDrag()
     {
-        // Debug.Log("Drag Start");
+        //Debug.Log("Drag Start");
         startPosition = transform.position;
         isDragging = true;
+
+        PlayPannedSound("event:/SFX/cardDraw");
     }
 
     public void EndDrag()
     {
-        // Debug.Log("Drag End");
+        //Debug.Log("Drag End");
         isDragging = false;
         if(isOverDropZone)
         {
             transform.SetParent(dropZone.transform, false);
+            cardFunctions.doEffect();
+            combo.adjustCombo(1);
+            deck.setCards(-1);
+
             Destroy(this.gameObject);
+
+            PlayPannedSound("event:/SFX/cardPlay");
         }
         else
         {
             transform.position = startPosition;
+
+            PlayPannedSound("event:/SFX/cardPlace");
         }
+    }
+
+    private void PlayPannedSound(string soundEvent)
+    {
+        FMOD.Studio.EventInstance soundToPlay = FMODUnity.RuntimeManager.CreateInstance(soundEvent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Panning Amount", transform.position.x);
+        soundToPlay.start();
     }
 }
