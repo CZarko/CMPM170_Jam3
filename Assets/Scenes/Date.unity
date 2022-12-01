@@ -2735,8 +2735,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-  - {fileID: 11400000, guid: d12c198b77751554aba2498b7b0c93da, type: 2}
   - {fileID: 11400000, guid: 0555cd3402a2a1e448432689a47fa921, type: 2}
+  - {fileID: 11400000, guid: c31ef9af2fc050046a2ef67440c95fd9, type: 2}
+  - {fileID: 11400000, guid: 5c5fdba2f391156459ae178066a3bf01, type: 2}
+  - {fileID: 11400000, guid: 99e4faecdc815e24091633840503b79f, type: 2}
+  - {fileID: 11400000, guid: 2e320cc307ccd1c4a8d8134dd4caf7e5, type: 2}
+  - {fileID: 11400000, guid: d5cb75519fedc8b42a9ab01212743a18, type: 2}
+  - {fileID: 11400000, guid: f3115a865a1d8d44eae08c3c1b63ac04, type: 2}
   - {fileID: 11400000, guid: de93e395872fa394ba4dad552f663de8, type: 2}
   - {fileID: 11400000, guid: c933ec8e85423934a8fc09cb917afcc3, type: 2}
   - {fileID: 11400000, guid: eda3e0f444f96564896366edc4518e55, type: 2}
@@ -2748,6 +2753,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b4cbd358ccdbc946bfecbb708c09fe9, type: 2}
   - {fileID: 11400000, guid: cbec310942c2138448654b804059b922, type: 2}
   - {fileID: 11400000, guid: a2c33b3b1ec043c46b6925877a6581cc, type: 2}
+  - {fileID: 11400000, guid: 064c16e6e7524124fb5eb59629e41bb0, type: 2}
+  - {fileID: 11400000, guid: 48e14731a08269946a86cb2b81118319, type: 2}
+  - {fileID: 11400000, guid: 019daba8c6e465f4faf6fe654bc2f115, type: 2}
+  - {fileID: 11400000, guid: 0d8c06af585caba4fa931b26a8915add, type: 2}
+  - {fileID: 11400000, guid: c0edfd0bec293d446829e287ab2ad6a8, type: 2}
+  - {fileID: 11400000, guid: e1b988fb664cdc54690f2a30d0247061, type: 2}
+  - {fileID: 11400000, guid: cafc6b4595d1e9c4ab03236a54ff0a03, type: 2}
+  - {fileID: 11400000, guid: ef527e766a14bc046a3a114b2c1d0233, type: 2}
   card: {fileID: 7572834981669171577, guid: 93ee2f3b77ed4634fba231e24c8d4835, type: 3}
   playerArea: {fileID: 670992287}
   deckSizeText: {fileID: 1722309148}
@@ -3320,6 +3333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trait: 0
   mSlider: {fileID: 1535851342}
+  traitsLearned: 0
 --- !u!1 &1722309146
 GameObject:
   m_ObjectHideFlags: 0

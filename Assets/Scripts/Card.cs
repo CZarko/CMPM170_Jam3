@@ -7,9 +7,12 @@ using UnityEngine;
 public class Card : ScriptableObject
 {
     public new string name;
+    public Sprite artwork;
+
     public string topic;
     public string type;
     public string effect;
+    public string flavor;
 
     //booleans and integers for all the meters
     public int  attractAmnt;

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: A9
   m_EditorClassIdentifier: 
   name: A9
+  artwork: {fileID: 0}
   topic: Video Games
   type: Conversation
   effect: Add 5 interest, add 10 trait
+  flavor: 
   attractAmnt: 0
   interestAmnt: 5
   comfortAmnt: 0

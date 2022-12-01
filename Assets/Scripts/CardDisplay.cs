@@ -7,11 +7,13 @@ using TMPro;
 public class CardDisplay : MonoBehaviour
 {
     public Card card;
+    public Image artwork;
 
     public TMP_Text nameText;
     public TMP_Text topicText;
     public TMP_Text typeText;
     public TMP_Text effectText;
+    public TMP_Text flavorText;
 
     //booleans and integers for all the meters
     public int attractAmnt;
@@ -43,9 +45,13 @@ public class CardDisplay : MonoBehaviour
     void Start()
     {
         nameText.text = card.name;
+        artwork.sprite = card.artwork;
+
         topicText.text = card.topic;
         typeText.text = card.type;
         effectText.text = card.effect;
+        flavorText.text = card.flavor;
+
 
         attractAmnt = card.attractAmnt;
         interestAmnt = card.interestAmnt;
