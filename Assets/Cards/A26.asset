@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A26
   m_EditorClassIdentifier: 
-  name: A26
+  name: The More the Merrier
+  artwork: {fileID: 21300000, guid: 699bde3dfbf95bb4d83a54f73a70c1e9, type: 3}
   topic: 
   type: Start
   effect: Double combo meter
+  flavor: '"More times the fun!"'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

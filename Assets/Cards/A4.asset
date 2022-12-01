@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A4
   m_EditorClassIdentifier: 
-  name: A4
+  name: Wine
+  artwork: {fileID: 21300000, guid: 683337bdda3dfcb40b50e0ae6e213138, type: 3}
   topic: Food
   type: Conversation
   effect: Add 5 attract, add 10 trait
+  flavor: '"I do not fancy wines, I prefer moans."'
   attractAmnt: 5
   interestAmnt: 0
   comfortAmnt: 0

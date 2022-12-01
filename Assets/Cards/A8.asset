@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A8
   m_EditorClassIdentifier: 
-  name: A8
+  name: First Programmer
+  artwork: {fileID: 21300000, guid: b7eb6dde3c5c144468bad3fe66aaf902, type: 3}
   topic: Programming
   type: Conversation
   effect: Add 5 interest, add 10 trait
+  flavor: "\"The world\u2019s first computer programmer was a renowned female mathematician.\""
   attractAmnt: 0
   interestAmnt: 5
   comfortAmnt: 0

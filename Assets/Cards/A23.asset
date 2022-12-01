@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A23
   m_EditorClassIdentifier: 
-  name: A23
+  name: Stuff Your Face
+  artwork: {fileID: 21300000, guid: 60ae67ea5d2b4bf45b9690753ba108a2, type: 3}
   topic: 
   type: Start
   effect: Silence
+  flavor: '"Sorry, did you want any?"'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

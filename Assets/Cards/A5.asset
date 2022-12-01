@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A5
   m_EditorClassIdentifier: 
-  name: A5
+  name: Loop Condition
+  artwork: {fileID: 21300000, guid: 853db4078da69494fadc3ada23fb17f7, type: 3}
   topic: Programming
   type: Conversation
   effect: Add 5 comfort, add 10 trait
+  flavor: '"You are my loop condition. I keep coming back to you."'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 5

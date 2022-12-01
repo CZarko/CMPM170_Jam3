@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A24
   m_EditorClassIdentifier: 
-  name: A24
+  name: Two Peas In a Pod
+  artwork: {fileID: 21300000, guid: 545f94019f5a39b4f9da5b63af2666b8, type: 3}
   topic: 
   type: Start
   effect: Double all convo effects this turn
+  flavor: '"Crazy how well we mesh, just like..."'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

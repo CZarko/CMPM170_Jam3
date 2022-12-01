@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A22
   m_EditorClassIdentifier: 
-  name: A22
+  name: Notice anything different?
+  artwork: {fileID: 21300000, guid: 5c8cda9cfee16394183810443a42a401, type: 3}
   topic: 
   type: Flair
   effect: Make date ask
+  flavor: '"Have you noticed anything different by any chance?"'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

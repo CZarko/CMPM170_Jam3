@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A20
   m_EditorClassIdentifier: 
-  name: A20
+  name: Fascination
+  artwork: {fileID: 21300000, guid: 2963b037e8d08a4418871c36ecdefe28, type: 3}
   topic: 
   type: Flair
   effect: Intrigue
+  flavor: '"Has anyone ever told you about this?"'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

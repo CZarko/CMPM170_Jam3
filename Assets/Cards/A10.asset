@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A10
   m_EditorClassIdentifier: 
-  name: A10
+  name: Lemons vs Limes
+  artwork: {fileID: 21300000, guid: b387927ff4cfc2b44ba4344a148a8fc0, type: 3}
   topic: Food
   type: Conversation
   effect: Add 5 interest, add 10 trait
+  flavor: '"Lemons float but limes sink."'
   attractAmnt: 0
   interestAmnt: 5
   comfortAmnt: 0

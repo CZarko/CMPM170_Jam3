@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A15
   m_EditorClassIdentifier: 
-  name: A15
+  name: Fluster
+  artwork: {fileID: 21300000, guid: f183481aaae9dcd4c9ffa4bf71ed05a8, type: 3}
   topic: 
   type: Flair
   effect: Change topic
+  flavor: '"Hey there hot stuff..."'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 0

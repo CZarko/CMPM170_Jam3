@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A9
   m_EditorClassIdentifier: 
-  name: A9
-  artwork: {fileID: 0}
+  name: Gameboy
+  artwork: {fileID: 21300000, guid: cbeff2a097528464f9dd2871216c63a4, type: 3}
   topic: Video Games
   type: Conversation
   effect: Add 5 interest, add 10 trait
-  flavor: 
+  flavor: '"The Gameboy was the first game in space."'
   attractAmnt: 0
   interestAmnt: 5
   comfortAmnt: 0

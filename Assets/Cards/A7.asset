@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e45c459cb8aa00428455a68f7b570ba, type: 3}
   m_Name: A7
   m_EditorClassIdentifier: 
-  name: A7
+  name: Raisins
+  artwork: {fileID: 21300000, guid: 26adf5189b3fe424cbf075eb40ac14bc, type: 3}
   topic: Food
   type: Conversation
   effect: Add 5 comfort, add 10 trait
+  flavor: '"Do you have raisins? How about a date?"'
   attractAmnt: 0
   interestAmnt: 0
   comfortAmnt: 5
