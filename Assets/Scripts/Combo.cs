@@ -15,6 +15,7 @@ public class Combo : MonoBehaviour
     }
     internal void setCombo(float adjustment)
     {
+        print("SET COMBO");
         combo = adjustment;
         combo = Mathf.Clamp(combo, 0, comboMax);
         mSlider.value = combo;
@@ -25,5 +26,14 @@ public class Combo : MonoBehaviour
         combo += toAdd;
         combo = Mathf.Clamp(combo, 0, comboMax);
         mSlider.value = combo;
+
+        if(toAdd > 0)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/comboRise");
+        }
+        else
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/comboBreak");
+        }
     }
 }
