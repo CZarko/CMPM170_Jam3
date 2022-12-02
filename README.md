@@ -1,8 +1,9 @@
 # CMPM170_Jam3
 A technical prototype of a card based RPG dating sim.
+    
     Caleb Zarko                
-    ​Programming, UI Development
-
+    Programming, UI Development
+    
     Joe Frumenti 
     Programming, System Design             
 
