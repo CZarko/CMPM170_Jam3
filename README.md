@@ -40,4 +40,4 @@ A technical prototype of a card based RPG dating sim.
     
     
     
-Joe touched me because i smell like old cheese.
+Joe touched me because Jonty smells like old cheese.
