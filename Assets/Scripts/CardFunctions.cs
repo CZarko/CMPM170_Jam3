@@ -42,17 +42,17 @@ public class CardFunctions : MonoBehaviour
 
     private void calculateMultipliers()
     {
-        float attractMultiplier = attractMeter.attraction/10f + 1;
-        float interestMultiplier = interestMeter.interest / 10f + 1;
-        float comfortMultiplier = comfortMeter.comfort / 10f + 1;
-        float comboMultiplier = comboMeter.combo + 1;
+        float attractMultiplier = attractMeter.attraction/10f;
+        float interestMultiplier = interestMeter.interest / 10f;
+        float comfortMultiplier = comfortMeter.comfort / 10f;
+        float comboMultiplier = comboMeter.combo;
 
         if (cardDisplay.topicText == topic.topicDisplay)
             topicMultiplier = 2;
         else
             topicMultiplier = 1;
 
-        traitMultiplier = attractMultiplier + interestMultiplier + comfortMultiplier + comboMultiplier + topicMultiplier;
+        traitMultiplier = 1 + attractMultiplier + interestMultiplier + comfortMultiplier + comboMultiplier + topicMultiplier;
 
     }
 
@@ -155,6 +155,7 @@ public class CardFunctions : MonoBehaviour
 
     private void addTrait(int traitAmount)
     {
+        print(traitMultiplier);
         traitMeter.setTrait(traitAmount * traitMultiplier + traitMeter.trait);
     }
 

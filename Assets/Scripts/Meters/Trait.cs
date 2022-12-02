@@ -19,8 +19,7 @@ public class Trait : MonoBehaviour
     internal void setTrait(float adjustment)
     {
         trait = adjustment;
-        trait = Mathf.Clamp(trait, 0, traitMax);
-        if (trait > traitMax)
+        if (trait >= traitMax)
             resetMeter();
         mSlider.value = trait / traitMax;
     }
@@ -29,7 +28,8 @@ public class Trait : MonoBehaviour
     {
         traitsLearned ++;
         trait -= traitMax;
-        if(trait > traitMax)
+        mSlider.value = trait/traitMax;
+        if (trait >= traitMax)
         {
             resetMeter();
         }
