@@ -603,8 +603,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: This is a game made by - Caleb Zarko, Joe Frumenti, Jonathan "Jonty" Lewis,
-    Justin Beedle, Martin P, Melissa Liu, Sam Tancio, Sophie Martin, Stephanie Styffe,
-    and Vivian Zheng
+    Justin Beedle, Martin Perina, Melissa Liu, Sam Tancio, Sophie Martin, Stephanie
+    Styffe, and Vivian Zheng
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f3bee36ff763bf46a4870eca6221fc8, type: 2}
   m_sharedMaterial: {fileID: 518452332974965513, guid: 1f3bee36ff763bf46a4870eca6221fc8, type: 2}
@@ -1383,7 +1383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6378139682449106318, guid: d40d4ee675fc8f44490da0c48192b14b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6378139682449106353, guid: d40d4ee675fc8f44490da0c48192b14b, type: 3}
       propertyPath: m_Camera
