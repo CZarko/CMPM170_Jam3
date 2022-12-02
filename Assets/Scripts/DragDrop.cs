@@ -11,7 +11,8 @@ public class DragDrop : MonoBehaviour
 
         private bool isDragging = false;
         private bool isOverDropZone = false;
-        private GameObject dropZone;
+        //private GameObject dropZone;
+        private GameObject dropImage;
         private Vector2 startPosition;
 
         private CardFunctions cardFunctions;
@@ -26,6 +27,11 @@ public class DragDrop : MonoBehaviour
         combo = GameObject.FindWithTag("Combo").GetComponent<Combo>();
     }
 
+    private void Awake() {
+        dropImage = GameObject.Find("DropZone").transform.Find("Drop Image").gameObject;
+        dropImage.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,19 +43,22 @@ public class DragDrop : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isOverDropZone = true;
-        dropZone = collision.gameObject;
+        if(collision.gameObject.name == "DropZone")
+            isOverDropZone = true;
+        //dropZone = collision.gameObject;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isOverDropZone = false;
-        dropZone = null;
+        if(collision.gameObject.name == "DropZone")
+            isOverDropZone = false;
+        //dropZone = null;
     }
 
     public void StartDrag()
     {
         //Debug.Log("Drag Start");
+        dropImage.SetActive(true);
         startPosition = transform.position;
         isDragging = true;
 
@@ -60,9 +69,10 @@ public class DragDrop : MonoBehaviour
     {
         //Debug.Log("Drag End");
         isDragging = false;
+        dropImage.SetActive(false);
         if(isOverDropZone)
         {
-            transform.SetParent(dropZone.transform, false);
+            //transform.SetParent(dropZone.transform, false);
             cardFunctions.doEffect();
             combo.adjustCombo(1);
             deck.setCards(-1);
