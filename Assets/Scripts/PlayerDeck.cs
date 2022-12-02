@@ -35,6 +35,12 @@ public class PlayerDeck : MonoBehaviour
         drawAmount = 2;
     }
 
+    private void Update() {
+        if(deck.Count.Equals(0)) {
+          Debug.Log("check");
+        }
+    }
+
     public void takeTurn()
     {
         for (int i = 0; i < drawAmount; i++)
